@@ -3,8 +3,21 @@ import { isValidObjectId } from "mongoose";
 
 import { phoneRegexp } from "../constants/index.js";
 
+import { contactSortFields } from "../db/models/Contact.js";
+
 const objectIdValidator = (value, helpers)=> {
   return isValidObjectId(value) ? value : helpers.message("invalid id format");
+}
+
+export const getContactsSchema = {
+  [Segments.QUERY]: Joi.object({
+    page: Joi.number().integer().min(1).default(1),
+    perPage: Joi.number().integer().min(1).default(10),
+    sortBy: Joi.string().valid(...contactSortFields).default("_id"),
+    sortOrder: Joi.string().valid("asc", "desc").default("asc"),
+    group: Joi.string().custom(objectIdValidator),
+    search: Joi.string(),
+  })
 }
 
 export const createContactSchema = {
@@ -15,7 +28,7 @@ export const createContactSchema = {
     }),
     email: Joi.string().email().required(),
     phone: Joi.string().pattern(phoneRegexp).required(),
-    group: Joi.string().custom(objectIdValidator).required()
+    group:Joi.string().custom(objectIdValidator).required()
   })
 }
 
@@ -35,3 +48,4 @@ export const updateContactSchema = {
     group: Joi.string().custom(objectIdValidator),
   }).min(1)
 }
+
