@@ -1,0 +1,89 @@
+.page {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+.card {
+  background: #141d31;
+  border: 1px solid #25304a;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  max-width: 430px;
+  padding: 34px;
+  width: 100%;
+}
+.eyebrow {
+  color: #e38a39;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.card h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.05em;
+  margin: 8px 0;
+}
+.lead {
+  color: #aab4c4;
+  line-height: 1.55;
+  margin-bottom: 26px;
+}
+.card label {
+  color: #b8c5da;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.card input {
+  background: #0e1628;
+  border: 1px solid #34435f;
+  border-radius: 8px;
+  color: #f2f7ff;
+  display: block;
+  margin-top: 6px;
+  outline: none;
+  padding: 11px;
+  width: 100%;
+}
+.card input:focus {
+  border-color: #65c9ce;
+  box-shadow: 0 0 0 3px rgba(101, 201, 206, 0.12);
+}
+.card label span,
+.serverError {
+  color: #ffadb9;
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.serverError {
+  margin-bottom: 14px;
+}
+.card button {
+  background: #65c9ce;
+  border: 0;
+  border-radius: 8px;
+  color: #0b1624;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 11px 14px;
+  width: 100%;
+}
+.card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.footer {
+  color: #aab4c4;
+  font-size: 0.88rem;
+  margin-top: 22px;
+  text-align: center;
+}
+.footer a {
+  color: #75d9dc;
+}

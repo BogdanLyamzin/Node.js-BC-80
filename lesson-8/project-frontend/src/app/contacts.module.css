@@ -1,0 +1,233 @@
+.page {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 54px 24px 80px;
+}
+.loading {
+  color: #b8c5da;
+  min-height: 100vh;
+  padding: 54px 24px;
+  text-align: center;
+}
+.header,
+.contact,
+.modal {
+  background: #141d31;
+  border: 1px solid #25304a;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+}
+.header {
+  align-items: center;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 24px;
+}
+.eyebrow {
+  color: #e38a39;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.header h1 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  letter-spacing: -0.06em;
+  margin: 6px 0;
+}
+.header p:last-child,
+.toolbar p,
+.muted {
+  color: #aab4c4;
+  margin: 0;
+}
+.toolbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.toolbar h2 {
+  margin: 0 0 4px;
+}
+.toolbar button,
+.header button,
+.modalActions button,
+.actions button {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 10px 14px;
+}
+.toolbar button,
+.modalActions button:last-child {
+  background: #65c9ce;
+  color: #0b1624;
+}
+.secondary {
+  background: #293957;
+  color: #dce9ff;
+}
+.danger {
+  background: #5e293a;
+  color: #ffdfe7;
+}
+.list {
+  display: grid;
+  gap: 12px;
+}
+.contact {
+  align-items: center;
+  border-radius: 13px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 19px;
+}
+.contactName {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0 0 5px;
+}
+.contact a,
+.phone {
+  color: #aab4c4;
+  font-size: 0.88rem;
+  margin: 2px 0;
+}
+.group {
+  background: #1e3a48;
+  border-radius: 999px;
+  color: #8de5e4;
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-top: 9px;
+  padding: 4px 8px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.empty,
+.requestError {
+  background: #141d31;
+  border: 1px solid #25304a;
+  border-radius: 13px;
+  color: #aab4c4;
+  padding: 24px;
+  text-align: center;
+}
+.requestError {
+  background: #4e2630;
+  border-color: #6c3141;
+  color: #ffced7;
+  text-align: left;
+}
+.overlay {
+  align-items: center;
+  background: rgba(3, 7, 16, 0.7);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 18px;
+  position: fixed;
+  z-index: 10;
+}
+.modal {
+  border-radius: 16px;
+  max-width: 500px;
+  padding: 24px;
+  width: 100%;
+}
+.modalHeader {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.modalHeader h2 {
+  font-size: 1.4rem;
+  margin: 5px 0 0;
+}
+.close {
+  background: transparent;
+  border: 0;
+  color: #dce9ff;
+  cursor: pointer;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+.modal label {
+  color: #b8c5da;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.modal input,
+.modal select {
+  background: #0e1628;
+  border: 1px solid #34435f;
+  border-radius: 8px;
+  color: #f2f7ff;
+  display: block;
+  margin-top: 6px;
+  outline: none;
+  padding: 11px;
+  width: 100%;
+}
+.modal label span {
+  color: #ffadb9;
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.modalActions {
+  display: flex;
+  gap: 9px;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+.details {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+.details div {
+  background: #0e1628;
+  border-radius: 8px;
+  padding: 12px;
+}
+.details dt {
+  color: #8492aa;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.details dd {
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 620px) {
+  .page {
+    padding: 28px 14px 48px;
+  }
+  .header,
+  .toolbar,
+  .contact {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .actions {
+    justify-content: flex-start;
+  }
+  .header button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+:root {
+  --background: #0b1020;
+  --foreground: #eff6ff;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+}
+body {
+  background:
+    radial-gradient(circle at 85% 0%, #1b344a 0, transparent 34rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100%;
+}
+button,
+input,
+select {
+  font: inherit;
+}
